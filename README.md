@@ -1,6 +1,13 @@
 # gulp-he
 For encoding or decoding HTML entities in your markup.
 
+## Installation
+```
+npm i @jordindateur/gulp-he
+// or
+yarn add @jordindateur/gulp-he
+```
+
 ## Encode
 
 
