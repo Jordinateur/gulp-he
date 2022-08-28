@@ -1,7 +1,6 @@
 const through = require('through2')
 const he = require('he')
 
-
 module.exports = function(method, options) {
 
   return through.obj(function(file, encoding, done) {
@@ -10,7 +9,7 @@ module.exports = function(method, options) {
 
     if(file.contents instanceof Buffer) {
       processed = he[method](file.contents.toString(), options),
-      buffer = new Buffer(processed);
+      buffer = Buffer.from(processed);
 
       file.contents = buffer;
     }
